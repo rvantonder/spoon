@@ -11,7 +11,7 @@ jobs:
         with:
           verbose: true
       - name: Upload LSIF data
-        uses: sourcegraph/lsif-upload-action@master
+        uses: sourcegraph/lsif-upload-action@rvt/fix-default-upload-ignore-value
         with:
           endpoint: https://sourcegraph.com
           github_token: ${{ secrets.GITHUB_TOKEN }}
