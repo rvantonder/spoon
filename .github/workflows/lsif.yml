@@ -1,8 +1,5 @@
 name: LSIF
-on:
-  push:
-    branches: 
-      - master
+on: [push, pull_request]
 jobs:
   build:
     name: Build and push LSIF data
@@ -19,3 +16,4 @@ jobs:
           endpoint: https://sourcegraph.com
           github_token: ${{ secrets.GITHUB_TOKEN }}
           file: dump.lsif
+          ignore_upload_failure: true
